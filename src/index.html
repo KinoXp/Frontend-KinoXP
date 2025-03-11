@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<div class="container">
+    <h1>Movie Booking</h1>
+    <form id="bookingForm">
+        <label for="customerName">Customer Name:</label>
+        <input type="text" id="customerName" name="customerName" required>
 
+        <label for="movieTitle">Movie Title:</label>
+        <input type="text" id="movieTitle" name="movieTitle" value="Inception" readonly>
+
+        <label for="numberOfSeats">Number of Seats:</label>
+        <input type="number" id="numberOfSeats" name="numberOfSeats" min="1" required>
+
+        <label for="userId">User ID:</label>
+        <input type="number" id="userId" name="userId" value="1" readonly>
+
+        <label for="screeningId">Screening ID:</label>
+        <input type="number" id="screeningId" name="screeningId" value="1" readonly>
+
+        <label for="seatNumbers">Seat Numbers (comma-separated):</label>
+        <input type="text" id="seatNumbers" name="seatNumbers" placeholder="e.g., 1,2,3" required>
+
+        <button type="submit">Book Tickets</button>
+    </form>
+
+    <div id="responseMessage"></div>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
